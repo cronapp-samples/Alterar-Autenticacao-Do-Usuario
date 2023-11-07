@@ -1,0 +1,12 @@
+{
+  "name": "io.cronapp.apps.alterarautenticacaodousuario",
+  "displayName": "Alterar-Autenticacao-Do-Usuario",
+  "version": "1.0.0",
+  "description": "Alterar-Autenticacao-Do-Usuario",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CronApp IDE",
+  "license": "Apache-2.0"
+}

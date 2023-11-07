@@ -1,0 +1,51 @@
+{
+  "onSystemStarts": null,
+  "onLogout": null,
+  "onLogin": null,
+  "onSessionCreate": null,
+  "onSessionDestroy": null,
+  "afterPageRender": null,
+  "afterLoginRender": null,
+  "afterHomeRender": null,
+  "onAuthenticate": {
+    "type": "server",
+    "blockly": {
+      "namespace": "blockly.Autenticacao",
+      "sourcePath": "src/main/java/blockly/Autenticacao.blockly",
+      "language": "java",
+      "methods": [
+        {
+          "name": "ParaAutenticar",
+          "hasReturn": "true",
+          "params": [
+            "username",
+            "password"
+          ]
+        }
+      ]
+    },
+    "blocklyMethod": "ParaAutenticar",
+    "blocklyClass": "blockly.Autenticacao",
+    "blocklyParams": [
+      {
+        "id": "cdbc02a6",
+        "name": "username",
+        "value": "username",
+        "type": "CUSTOM"
+      },
+      {
+        "id": "5f32a481",
+        "name": "password",
+        "value": "password",
+        "type": "CUSTOM"
+      }
+    ]
+  },
+  "onGetRoles": null,
+  "onGetUserSecurables": null,
+  "onGetSecurableViews": null,
+  "onGetRoleSecurables": null,
+  "onChangePassword": null,
+  "onResetPassword": null,
+  "onConfigureConnection": null
+}
