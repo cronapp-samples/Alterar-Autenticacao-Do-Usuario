@@ -17,8 +17,8 @@ public static final int TIMEOUT = 300;
  * @param username
  * @param password
  *
- * @author Laila Maria Vieira Souza
- * @since 07/11/2023, 10:04:11
+ * @author Igor Andrade
+ * @since 10/01/2024, 18:57:51
  *
  */
 public static Var ParaAutenticar(@ParamMetaData(description = "username", id = "cdbc02a6") Var username, @ParamMetaData(description = "password", id = "5f32a481") Var password) throws Exception {
@@ -80,6 +80,46 @@ public static Var ParaAutenticar(@ParamMetaData(description = "username", id = "
         Var.VAR_FALSE;
     }
     return valorBooleano;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @param username
+ *
+ * @author Igor Andrade
+ * @since 10/01/2024, 18:57:51
+ *
+ */
+public static Var ParaObterGruposAcesso(@ParamMetaData(description = "username", id = "f78e3a92") Var username) throws Exception {
+ return new Callable<Var>() {
+
+   private Var listaGrupos = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    /**
+     * Essa função deve ser associada à ação "Para Obter Grupos de Acesso"
+     * da funcionalidade Eventos e Ações. Ainda nas configurações da ação,
+     * selecione a constante "username" no parâmetro "username" da função.
+     *
+     * Ao logar com os 2 usuários da função ParaAutenticar, apenas o usuário
+     * "user1" estará vinculado com o grupo "Administrators".
+     */
+    listaGrupos =
+    Var.VAR_NULL;
+    if (
+    cronapi.logic.Operations.isNullOrEmpty(username)
+    .negate().getObjectAsBoolean()) {
+        if (
+        Var.valueOf(username.equals(
+        Var.valueOf("user1"))).getObjectAsBoolean()) {
+            listaGrupos =
+            cronapi.list.Operations.newList(
+            Var.valueOf("Administrators"));
+        }
+    }
+    return listaGrupos;
    }
  }.call();
 }
